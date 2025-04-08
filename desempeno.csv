@@ -1,0 +1,11 @@
+Desempeño clase A
+Sum TP:,3.0,Sum TN:,6.0,Sum FP:,4.0,Sum FN:,2.0
+Precision:,0.42857143,Recall:,0.6,Accuracy:,0.6,F-Score:,0.5
+Desempeño clase B
+Sum TP:,4.0,Sum TN:,8.0,Sum FP:,2.0,Sum FN:,1.0
+Precision:,0.6666667,Recall:,0.8,Accuracy:,0.8,F-Score:,0.72727275
+Desempeño clase C
+Sum TP:,0.0,Sum TN:,8.0,Sum FP:,2.0,Sum FN:,5.0
+Precision:,0.0,Recall:,0.0,Accuracy:,0.53333336,F-Score:,NaN
+Desempeño general del modelo
+Precision:,0.36507937,Recall:,0.4666667,Accuracy:,0.64444447,F-Score:,NaN
