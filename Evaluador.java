@@ -13,6 +13,7 @@ import java.util.Comparator;
 public class Evaluador {
     ArrayList<ArrayList<String>> datos;
     ArrayList<String> clases;
+    Integer matrizConfusion[][];
 
     Float precisionModelo = 0.0f;
     Float recallModelo = 0.0f;
@@ -22,6 +23,12 @@ public class Evaluador {
     Evaluador(String archivo, Integer numeroClases){
         datos = new ArrayList<ArrayList<String>>();
         clases = new ArrayList<String>();
+        matrizConfusion = new Integer[numeroClases][numeroClases];
+        for (int i = 0; i < matrizConfusion.length; i++) {
+            for (int j = 0; j < matrizConfusion.length; j++) {
+                matrizConfusion[i][j] = 0;
+            }
+        }
         BufferedReader bufferedReader;
         String line;
         
@@ -189,6 +196,51 @@ public class Evaluador {
 
         try {
             writerDesempeno.close();
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+
+        generarMatrizConfusion();
+    }
+
+    void generarMatrizConfusion(){
+        FileWriter writer;
+        File matrizFile = new File("matriz.csv");
+
+        if(matrizFile.exists()){
+            matrizFile.delete();
+        }
+
+        try {
+            writer = new FileWriter(matrizFile);
+        } catch (IOException e) {
+            System.out.println(e);
+            return;
+        }
+
+        for (int i = 1; i < datos.size(); i++) {
+            String real = datos.get(i).get(1);
+            String predecida = datos.get(i).get(2);
+
+            matrizConfusion[clases.indexOf(real)][clases.indexOf(predecida)] += 1;
+        }
+
+        try {
+            writer.write(",");
+            for (String clase : clases) {
+                writer.write(clase + ',');
+            }
+            writer.write('\n');
+            for (String clase : clases) {
+                writer.write(clase + ',');
+                for (int i = 0; i < matrizConfusion.length; i++) {
+                    writer.write(Integer.toString(matrizConfusion[clases.indexOf(clase)][i]));
+                    writer.write(',');
+                }
+                writer.write('\n');
+            }
+            
+            writer.close();
         } catch (IOException e) {
             System.out.println(e);
         }

@@ -1,11 +1,11 @@
-Desempeño clase A
-Sum TP:,3.0,Sum TN:,6.0,Sum FP:,4.0,Sum FN:,2.0
-Precision:,0.42857143,Recall:,0.6,Accuracy:,0.6,F-Score:,0.5
-Desempeño clase B
-Sum TP:,4.0,Sum TN:,8.0,Sum FP:,2.0,Sum FN:,1.0
-Precision:,0.6666667,Recall:,0.8,Accuracy:,0.8,F-Score:,0.72727275
-Desempeño clase C
-Sum TP:,0.0,Sum TN:,8.0,Sum FP:,2.0,Sum FN:,5.0
-Precision:,0.0,Recall:,0.0,Accuracy:,0.53333336,F-Score:,NaN
+Desempeño clase 1:Bachelors
+Sum TP:,1633.0,Sum TN:,264.0,Sum FP:,261.0,Sum FN:,168.0
+Precision:,0.8621964,Recall:,0.9067185,Accuracy:,0.8155632,F-Score:,0.8838971
+Desempeño clase 2:Masters
+Sum TP:,211.0,Sum TN:,1740.0,Sum FP:,137.0,Sum FN:,238.0
+Precision:,0.6063218,Recall:,0.46993318,Accuracy:,0.83877903,F-Score:,0.5294856
+Desempeño clase 3:PHD
+Sum TP:,8.0,Sum TN:,2174.0,Sum FP:,76.0,Sum FN:,68.0
+Precision:,0.0952381,Recall:,0.10526316,Accuracy:,0.93809116,F-Score:,0.099999994
 Desempeño general del modelo
-Precision:,0.36507937,Recall:,0.4666667,Accuracy:,0.64444447,F-Score:,NaN
+Precision:,0.5212521,Recall:,0.4939716,Accuracy:,0.8641445,F-Score:,0.50446093
